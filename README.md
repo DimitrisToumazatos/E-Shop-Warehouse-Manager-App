@@ -9,6 +9,28 @@ Dimitris Fotogiannopoulos: Detailed Analysis and Graphs demonstrating App's usag
 
 This document gives an overview of the application and its functionality.
 
+# How to run:
+1) Open Android Studio and select the device you want.
+2) Press the "Run" button.
+
+
+Demo User: 
+  * Username : toumazatos@mail.com
+  * password : 12  
+  *(Feel free to create your own account, if you please)* 
+
+Demo Manager: 
+  * Username : admin@mail.com
+  * password : admin
+
+## Pictures of the App
+
+<p float="left">
+  <img src="./docs/markdown/Home.png" width="211" />
+  <img src="./docs/markdown/Manager.png" width="205" /> 
+  <img src="./docs/markdown/Customer.png" width="200" />
+</p>
+
 ## Overview
 
 The application allows medicine warehouse managers to manage their stock and service orders.
