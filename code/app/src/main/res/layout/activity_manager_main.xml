@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <Button
+            android:id="@+id/manager_main_log_out_button"
+            android:layout_width="220dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/button"
+            android:text="@string/log_out_button"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/onViewClientStatistics"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/onViewClientStatistics"
+            app:layout_constraintTop_toBottomOf="@+id/onViewClientStatistics"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/manager_main_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/manager_main_header"
+            android:textColor="@color/text"
+            android:textSize="45sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/viewOrderInboxBtn"
+            android:layout_width="220dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="@color/button"
+            android:text="@string/manager_main_order_inbox"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manager_main_header"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/restockProductsBtn"
+            android:layout_width="220dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/button"
+            android:text="@string/manager_main_restock"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/viewOrderInboxBtn"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/viewOrderInboxBtn"
+            app:layout_constraintTop_toBottomOf="@+id/viewOrderInboxBtn"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/onRecallOrderedMedicine"
+            android:layout_width="220dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/button"
+            android:text="@string/manager_main_recall_medicine"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/restockProductsBtn"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/restockProductsBtn"
+            app:layout_constraintTop_toBottomOf="@+id/restockProductsBtn"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/onViewClientStatistics"
+            android:layout_width="220dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/button"
+            android:text="@string/manager_main_view_statistics"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/onRecallOrderedMedicine"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/onRecallOrderedMedicine"
+            app:layout_constraintTop_toBottomOf="@+id/onRecallOrderedMedicine"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

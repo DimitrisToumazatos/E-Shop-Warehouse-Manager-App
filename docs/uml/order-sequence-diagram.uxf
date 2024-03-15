@@ -1,0 +1,179 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><help_text>bg=orange
+</help_text><element><id>UMLActor</id><coordinates><x>27</x><y>0</y><w>54</w><h>99</h></coordinates><panel_attributes>Client</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>144</x><y>36</y><w>90</w><h>27</h></coordinates><panel_attributes>_:OrderUI_
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>36</x><y>81</y><w>36</w><h>2529</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;20;2790</additional_attributes></element><element><id>UMLClass</id><coordinates><x>279</x><y>36</y><w>90</w><h>27</h></coordinates><panel_attributes>_:Account_
+bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>315</x><y>54</y><w>27</w><h>1269</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;1390</additional_attributes></element><element><id>UMLClass</id><coordinates><x>432</x><y>450</y><w>90</w><h>27</h></coordinates><panel_attributes>_:Order_
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>468</x><y>468</y><w>36</w><h>1746</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;20;1920</additional_attributes></element><element><id>UMLClass</id><coordinates><x>612</x><y>1134</y><w>90</w><h>27</h></coordinates><panel_attributes>_:OrderLine_
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>648</x><y>1152</y><w>36</w><h>1179</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;20;1290</additional_attributes></element><element><id>UMLClass</id><coordinates><x>747</x><y>36</y><w>90</w><h>27</h></coordinates><panel_attributes>_:Stock_
+bg=Yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>783</x><y>54</y><w>27</w><h>2448</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;2700</additional_attributes></element><element><id>UMLClass</id><coordinates><x>909</x><y>36</y><w>90</w><h>27</h></coordinates><panel_attributes>_:ProductType_
+bg=cyan</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>954</x><y>54</y><w>27</w><h>1755</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;1930</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1035</x><y>2151</y><w>90</w><h>27</h></coordinates><panel_attributes>_:BackOrder_
+bg=black</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>180</x><y>711</y><w>18</w><h>486</h></coordinates><panel_attributes>
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>198</x><y>99</y><w>162</w><h>45</h></coordinates><panel_attributes>displayOrderChoice()
+lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;30;40;30;40;10;10;10</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>189</x><y>99</y><w>18</w><h>36</h></coordinates><panel_attributes>
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>36</x><y>144</y><w>162</w><h>45</h></coordinates><panel_attributes>Start New Order
+or Load Draft
+lt=&lt;-</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>UMLFrame</id><coordinates><x>108</x><y>198</y><w>270</w><h>387</h></coordinates><panel_attributes>alt
+--
+                                [orderChoice == draft]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-.
+                                [orderChoice == new]</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>315</x><y>243</y><w>18</w><h>54</h></coordinates><panel_attributes>
+bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>189</x><y>243</y><w>144</w><h>36</h></coordinates><panel_attributes>getDraftOrders()
+lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>189</x><y>270</y><w>144</w><h>36</h></coordinates><panel_attributes>draftOrders
+lt=&lt;..</panel_attributes><additional_attributes>10;20;140;20</additional_attributes></element><element><id>UMLFrame</id><coordinates><x>135</x><y>306</y><w>225</w><h>180</h></coordinates><panel_attributes>alt
+--
+                               [len(draftOrders) !== 0]
+
+
+
+
+
+
+-.
+                              [len(draftOrders) == 0]</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>189</x><y>351</y><w>18</w><h>36</h></coordinates><panel_attributes>
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>198</x><y>351</y><w>153</w><h>45</h></coordinates><panel_attributes>displayDraftOrders()
+lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;30;40;30;40;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>45</x><y>387</y><w>153</w><h>36</h></coordinates><panel_attributes>Select Draft Order
+lt=&lt;-</panel_attributes><additional_attributes>150;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>324</x><y>450</y><w>126</w><h>36</h></coordinates><panel_attributes>new Order()
+lt=&lt;..</panel_attributes><additional_attributes>120;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>54</y><w>27</w><h>2439</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;2690</additional_attributes></element><element><id>Relation</id><coordinates><x>198</x><y>603</y><w>180</w><h>45</h></coordinates><panel_attributes>displayOrderMenu(order)
+lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;30;40;30;40;10;10;10</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>189</x><y>603</y><w>18</w><h>45</h></coordinates><panel_attributes>
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>36</x><y>720</y><w>162</w><h>54</h></coordinates><panel_attributes>Search Product OR
+Save as Draft OR
+Complete Order
+lt=&lt;-</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>UMLFrame</id><coordinates><x>99</x><y>891</y><w>1062</w><h>1710</h></coordinates><panel_attributes>alt
+--
+[action is search]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-.
+[action is save as draft]
+
+
+
+
+
+
+
+
+
+
+
+-..
+[action is complete]</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>36</x><y>801</y><w>162</w><h>45</h></coordinates><panel_attributes>Search with
+EOF, Name, Category
+lt=&lt;-</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>189</x><y>819</y><w>612</w><h>36</h></coordinates><panel_attributes>searchForProduct(EOF, name, category)
+lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>660;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>783</x><y>819</y><w>18</w><h>243</h></coordinates><panel_attributes>
+bg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>792</x><y>846</y><w>18</w><h>36</h></coordinates><panel_attributes>
+bg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>801</x><y>846</y><w>252</w><h>45</h></coordinates><panel_attributes>searchByCriteria(EOF, name, category)
+lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;30;40;30;40;10;10;10</additional_attributes></element><element><id>UMLFrame</id><coordinates><x>720</x><y>891</y><w>297</w><h>99</h></coordinates><panel_attributes>loop
+--
+[for : ProductType]
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>954</x><y>927</y><w>18</w><h>45</h></coordinates><panel_attributes>
+bg=cyan</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>792</x><y>927</y><w>180</w><h>36</h></coordinates><panel_attributes>getProductInfo()
+lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>180;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>792</x><y>945</y><w>180</w><h>36</h></coordinates><panel_attributes>productInfo
+lt=&lt;..</panel_attributes><additional_attributes>10;20;180;20</additional_attributes></element><element><id>Relation</id><coordinates><x>189</x><y>990</y><w>612</w><h>36</h></coordinates><panel_attributes>productInfoList
+lt=&lt;..</panel_attributes><additional_attributes>10;20;660;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>189</x><y>1035</y><w>18</w><h>36</h></coordinates><panel_attributes>
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>198</x><y>1035</y><w>216</w><h>45</h></coordinates><panel_attributes>displayProducts(productInfoList)
+lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;30;40;30;40;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>45</x><y>1080</y><w>153</w><h>45</h></coordinates><panel_attributes>Select Quantity
+to Order
+lt=&lt;-</panel_attributes><additional_attributes>150;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>477</x><y>1134</y><w>153</w><h>45</h></coordinates><panel_attributes>new OrderLine(
+productInfo, quantity)
+lt=&lt;..</panel_attributes><additional_attributes>150;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>315</x><y>450</y><w>18</w><h>27</h></coordinates><panel_attributes>
+bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>189</x><y>441</y><w>144</w><h>36</h></coordinates><panel_attributes>createNewOrder()
+lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>432</x><y>540</y><w>90</w><h>27</h></coordinates><panel_attributes>_:Order_
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>324</x><y>540</y><w>126</w><h>36</h></coordinates><panel_attributes>new Order()
+lt=&lt;..</panel_attributes><additional_attributes>120;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>315</x><y>540</y><w>18</w><h>27</h></coordinates><panel_attributes>
+bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>189</x><y>531</y><w>144</w><h>36</h></coordinates><panel_attributes>createNewOrder()
+lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>468</x><y>1125</y><w>18</w><h>54</h></coordinates><panel_attributes>
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>189</x><y>1116</y><w>297</w><h>36</h></coordinates><panel_attributes>createOrderLine(productInfo, selectedQuantitty)
+lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>310;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>315</x><y>1269</y><w>18</w><h>36</h></coordinates><panel_attributes>
+bg=red</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>180</x><y>1251</y><w>18</w><h>117</h></coordinates><panel_attributes>
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>180</x><y>81</y><w>18</w><h>576</h></coordinates><panel_attributes>
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>189</x><y>1269</y><w>144</w><h>45</h></coordinates><panel_attributes>saveOrderAsDraft(
+order)
+lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>189</x><y>1314</y><w>18</w><h>36</h></coordinates><panel_attributes>
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>198</x><y>1314</y><w>144</w><h>45</h></coordinates><panel_attributes>setNotDone(False)
+lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;30;40;30;40;10;10;10</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>180</x><y>1413</y><w>18</w><h>1062</h></coordinates><panel_attributes>
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>783</x><y>1413</y><w>18</w><h>1071</h></coordinates><panel_attributes>
+bg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>189</x><y>1422</y><w>612</w><h>36</h></coordinates><panel_attributes>checkOrderQuantities(order)
+lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>660;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>468</x><y>1458</y><w>18</w><h>54</h></coordinates><panel_attributes>
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>477</x><y>1458</y><w>324</w><h>36</h></coordinates><panel_attributes>getOrderLines()
+lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;20;340;20</additional_attributes></element><element><id>Relation</id><coordinates><x>477</x><y>1485</y><w>324</w><h>36</h></coordinates><panel_attributes>orderLines
+lt=&lt;..</panel_attributes><additional_attributes>340;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>657</x><y>1575</y><w>144</w><h>45</h></coordinates><panel_attributes>getOrderLines()
+lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;22;140;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>648</x><y>1575</y><w>18</w><h>54</h></coordinates><panel_attributes>
+bg=green</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>657</x><y>1602</y><w>144</w><h>36</h></coordinates><panel_attributes>orderedQuantity
+lt=&lt;..</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>UMLFrame</id><coordinates><x>108</x><y>1521</y><w>1044</w><h>864</h></coordinates><panel_attributes>loop
+--
+                             [for : OrderLine]
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>792</x><y>1647</y><w>18</w><h>54</h></coordinates><panel_attributes>
+bg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>801</x><y>1656</y><w>243</w><h>45</h></coordinates><panel_attributes>searchByCriteria(EOF,name,category)
+lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;30;40;30;40;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>792</x><y>1710</y><w>180</w><h>36</h></coordinates><panel_attributes>getQuantityInStock()
+lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>180;20;10;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>954</x><y>1710</y><w>18</w><h>72</h></coordinates><panel_attributes>
+bg=cyan</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>792</x><y>1737</y><w>180</w><h>36</h></coordinates><panel_attributes>quantityInStock
+lt=&lt;..</panel_attributes><additional_attributes>10;20;180;20</additional_attributes></element><element><id>UMLFrame</id><coordinates><x>153</x><y>1926</y><w>990</w><h>441</h></coordinates><panel_attributes>opt
+--
+[orderedQuantity &gt; quantityInStock]</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>189</x><y>1962</y><w>612</w><h>36</h></coordinates><panel_attributes>askForBackOrder(productInfo)
+lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;20;660;20</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>189</x><y>1998</y><w>18</w><h>36</h></coordinates><panel_attributes>
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>198</x><y>1998</y><w>234</w><h>45</h></coordinates><panel_attributes>displayBackOrderReq(productInfo)
+lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;30;40;30;40;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>45</x><y>2043</y><w>144</w><h>36</h></coordinates><panel_attributes>Answers (Y/N)
+lt=&lt;-</panel_attributes><additional_attributes>140;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>189</x><y>2061</y><w>612</w><h>36</h></coordinates><panel_attributes>backOrderAnswer
+lt=&lt;..</panel_attributes><additional_attributes>660;20;10;20</additional_attributes></element><element><id>UMLFrame</id><coordinates><x>450</x><y>2097</y><w>684</w><h>162</h></coordinates><panel_attributes>opt
+--
+                                                                              [backorder=True]</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1080</x><y>2169</y><w>27</w><h>45</h></coordinates><panel_attributes>lt=.</panel_attributes><additional_attributes>10;10;10;30</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>1080</x><y>2196</y><w>18</w><h>54</h></coordinates><panel_attributes>bg=black</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>477</x><y>2115</y><w>18</w><h>81</h></coordinates><panel_attributes>
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>486</x><y>2142</y><w>567</w><h>36</h></coordinates><panel_attributes>		   new Backorder(productInfo, orderedQuantity - quantityInStock)
+lt=&lt;..</panel_attributes><additional_attributes>610;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>486</x><y>2115</y><w>315</w><h>36</h></coordinates><panel_attributes>createBackorder()
+lt=&lt;-</panel_attributes><additional_attributes>10;20;330;20</additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>2268</y><w>207</w><h>36</h></coordinates><panel_attributes>setOrderedQuantity(quantityInStock)
+lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>50;20;170;20</additional_attributes></element><element><id>Relation</id><coordinates><x>801</x><y>2394</y><w>171</w><h>45</h></coordinates><panel_attributes>sendToManager(order)
+lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;30;40;30;40;10;10;10</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>792</x><y>2394</y><w>18</w><h>36</h></coordinates><panel_attributes>
+bg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLFrame</id><coordinates><x>0</x><y>702</y><w>1170</w><h>1926</h></coordinates><panel_attributes>loop
+--
+[while notDone == True]</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>189</x><y>2421</y><w>18</w><h>45</h></coordinates><panel_attributes>
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>198</x><y>2421</y><w>144</w><h>45</h></coordinates><panel_attributes>setNotDone(False)
+lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;30;40;30;40;10;10;10</additional_attributes></element><element><id>UMLGeneric</id><coordinates><x>657</x><y>2268</y><w>18</w><h>36</h></coordinates><panel_attributes>
+bg=green</panel_attributes><additional_attributes></additional_attributes></element></diagram>

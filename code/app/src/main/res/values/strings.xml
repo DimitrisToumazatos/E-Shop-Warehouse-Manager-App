@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Warehouse Manager</string>
+
+    <!-- Home Page -->
+    <string name="home_header">⚕️Pharmacy Buddy⚕️</string>
+    <string name="home_log_in_customer">Customer Log In</string>
+    <string name="home_sign_up">Customer Sign Up</string>
+    <string name="home_log_in_manager">Manager Log In</string>
+
+    <!-- Sign Up -->
+    <string name="sign_up_legal_name">Legal Name</string>
+    <string name="sign_up_legal_name_short">Name</string>
+    <string name="sign_up_TIN">TIN</string>
+    <string name="sign_up_postal_code">Postal Code</string>
+    <string name="sign_up_postal_code_short">Code</string>
+    <string name="sign_up_country">Country</string>
+    <string name="sign_up_state">State</string>
+    <string name="sign_up_city">City</string>
+    <string name="sign_up_street">Street</string>
+    <string name="sign_up_street_num">Number</string>
+    <string name="sign_up_button">Sign Up</string>
+
+    <!-- Customer Main Page -->
+    <string name="customer_main_header">Welcome,\nCustomer 👋</string>
+    <string name="customer_main_new_order_button">Create New Order</string>
+    <string name="customer_main_draft_order_button">Continue Draft</string>
+    <string name="customer_main_view_mail">View Mail</string>
+
+    <!-- Customer Draft Orders Page -->
+    <string name="draft_orders_header">Draft Orders 🛠️</string>
+
+    <!-- Customer Order Page -->
+    <string name="order_page_header">Your Order 📦</string>
+    <string name="order_page_submit_button">Submit Order</string>
+    <string name="order_page_save_button">Save As Draft</string>
+    <string name="order_page_add_product_button">Add Product</string>
+
+    <!-- Customer Order Product Item -->
+    <string name="list_item_order_product_remove_button">Remove</string>
+
+    <!-- Manager Main Page -->
+    <string name="manager_main_header">Welcome,\nManager 👋</string>
+    <string name="manager_main_order_inbox">View Order Inbox</string>
+    <string name="manager_main_restock">Restock Products</string>
+    <string name="manager_main_recall_medicine">Recall Medicine</string>
+    <string name="manager_main_view_statistics">View Statistics</string>
+
+    <!-- Manager Order Inbox -->
+    <string name="order_inbox_header">Order Inbox 📫</string>
+    <string name="order_inbox_order_id">N/A</string>
+    <string name="order_inbox_customer_name">N/A</string>
+    <string name="order_inbox_total_cost">N/A</string>
+    <string name="order_inbox_view_order_button">View Order</string>
+
+    <!-- Manager Order Execution -->
+    <string name="execute_order_header">Order Overview 📦</string>
+    <string name="execute_order_execute_button">Execute Order</string>
+    <string name="execute_order_cancel_button">Cancel Order</string>
+
+    <!-- Order Execution Product Items -->
+    <string name="list_item_product_name">N/A</string>
+    <string name="list_item_product_quantity">N/A</string>
+    <string name="list_item_product_price">N/A</string>
+
+    <!-- Restock Products -->
+    <string name="restock_products_header">Restock Products</string>
+    <string name="restock_products_EOF">EOF Code:</string>
+    <string name="restock_products_batch">Batch ID:</string>
+    <string name="restock_products_quantity">Quantity:</string>
+    <string name="restock_products_restock_button">Restock</string>
+
+    <!-- Recall Batch -->
+    <string name="recall_batch_header">Recall Batch</string>
+    <string name="recall_batch_button">Recall</string>
+    <string name="popup_recall_mail">One of your orders contained medicine from batches that have been recalled from EOF. Please contact the manager.</string>
+
+    <!-- Misc -->
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="log_in_button">Log In</string>
+    <string name="log_out_button">Log Out</string>
+    <string name="ok">OK.</string>
+    <string name="not_assigned">N/A</string>
+    <string name="confirm">Confirm</string>
+    <string name="new_email">New Email from Manager"</string>
+</resources>

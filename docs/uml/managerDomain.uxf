@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>2</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>274</x>
+      <y>94</y>
+      <w>32</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+HomePageView
+--
+#logInAsManager()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>94</y>
+      <w>52</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>HomePageActivity
+--
+-initialized: Boolean
+--
+#onCreate(Bundle savedInstanceState)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>430</x>
+      <y>94</y>
+      <w>32</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>HomePagePresenter
+--
+-view: HomePageView
+--
+#onLogInAsManager()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>304</x>
+      <y>100</y>
+      <w>40</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+implements</panel_attributes>
+    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>100</y>
+      <w>44</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+has</panel_attributes>
+    <additional_attributes>200.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>338</x>
+      <y>134</y>
+      <w>54</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>LogInAsManagerActivity
+--
+-emailField, passwordField: EditText
+-logInButton: Button
+-logInButtonEnabled: Boolean
+-email,password: String
+#inputFieldsWatcher: TextWatcher
+--
+#onCreate(Bundle savedInstanceState)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>364</x>
+      <y>110</y>
+      <w>42</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+opens when manager logs in</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>266</x>
+      <y>134</y>
+      <w>56</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+LogInAsManagerView
+--
+
+--
+#onSuccessfulLogIn(UserAccount user)
+#showError(String title, String message)
+#showToast(String message)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>144</y>
+      <w>22</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+implements</panel_attributes>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>298</x>
+      <y>158</y>
+      <w>72</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+has</panel_attributes>
+    <additional_attributes>10.0;140.0;340.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>252</x>
+      <y>186</y>
+      <w>98</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>LogInAsManagerPresenter
+--
+#view: LogInAsCustomerView
+#users: ManagerAccountDAOMemory
+--
+#onLogInButton(String email, String password, boolean logInButtonEnabled)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>364</x>
+      <y>158</y>
+      <w>46</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+opens</panel_attributes>
+    <additional_attributes>210.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>186</y>
+      <w>54</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>ManagerMainActivity
+--
+
+--
+#onCreate(Bundle savedInstanceState)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>432</x>
+      <y>138</y>
+      <w>48</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+implements</panel_attributes>
+    <additional_attributes>220.0;10.0;10.0;310.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>476</x>
+      <y>124</y>
+      <w>102</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+ManagerMainView
+--
+
+--
+#viewOrderInboxButton(ManagerAccountDAOMemory managerMemory)
+#restockProductsButton(ManagerAccountDAOMemory managerMemory)
+#recallOrderedMedicineButton(ManagerAccountDAOMemory managerMemory)
+#viewClientStatisticsButton(ManagerAccountDAOMemory managerMemory)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>530</x>
+      <y>148</y>
+      <w>10</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+has</panel_attributes>
+    <additional_attributes>10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>496</x>
+      <y>154</y>
+      <w>66</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>ManagerMainPresenter
+--
+-view: CustomerMainView
+-managerMemory: ManagerAccountDaoMemory
+-manager: ManagerAccount
+--
+#getManagerName(): String
+#onViewOrderInboxButton()
+#onRestockProductsButton()
+#onRecallOrderedMedicineButton()
+#onViewClientStatisticsButton()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>406</x>
+      <y>214</y>
+      <w>60</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+opens when view order inbox</panel_attributes>
+    <additional_attributes>280.0;200.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>434</x>
+      <y>254</y>
+      <w>54</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>OrderInboxActivity
+--
+
+--
+#onCreate(Bundle savedInstanceState)
++viewOrder(String orderId)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>258</x>
+      <y>320</y>
+      <w>56</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+OrderInboxView
+--
+
+--
+#onSuccessfulViewOrder(String orderId)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>266</y>
+      <w>126</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+implements</panel_attributes>
+    <additional_attributes>10.0;330.0;610.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>458</x>
+      <y>282</y>
+      <w>74</w>
+      <h>124</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+has</panel_attributes>
+    <additional_attributes>350.0;600.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>502</x>
+      <y>402</y>
+      <w>50</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>OrderInboxViewModel
+--
+
+--
++getPresenter(): OrderInboxPresenter
+#onCleared()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>604</x>
+      <y>402</y>
+      <w>98</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>OrderInboxPresenter
+--
+-orderResults: List&lt;AbstractOrder&gt;
+-view: OrderInboxView
+-orders: OrderDAO
+--
++getOrderResults(): List&lt;AbstractOrder&gt;
++getOrderDAO(): OrderDAO
++setOrderDAO(OrderDAO orders)
++setView(OrderInboxView view)
++findAll(String status)
++onViewOrder(String orderId)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>550</x>
+      <y>410</y>
+      <w>58</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+has</panel_attributes>
+    <additional_attributes>270.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>418</x>
+      <y>282</y>
+      <w>46</w>
+      <h>122</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+has</panel_attributes>
+    <additional_attributes>10.0;590.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>400</y>
+      <w>144</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>OrderInboxRecyclerViewAdapter
+--
+-mValues: List&lt;AbstractOrder&gt;
+--
++onCreateViewHolder(ViewGroup parent, int viewType): OrderInboxRecyclerViewAdapter.ViewHolder
++onBindViewHolder(OrderInboxRecyclerViewAdapter.ViewHolder holder, int position)
++getItemCount():Integer
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>226</x>
+      <y>400</y>
+      <w>98</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>RecyclerView.Adapter&lt;OrderInboxRecyclerViewAdapter.ViewHolder&gt;
+--
+
+--
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>412</y>
+      <w>34</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+extended by</panel_attributes>
+    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>442</y>
+      <w>48</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+contains class</panel_attributes>
+    <additional_attributes>10.0;80.0;220.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>338</x>
+      <y>458</y>
+      <w>86</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>ViewHolder
+-
++customerName, orderId, orderCost: TextView
++viewOrderButton: Button {readOnly} 
+-</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>422</x>
+      <y>442</y>
+      <w>62</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+has</panel_attributes>
+    <additional_attributes>290.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>436</x>
+      <y>458</y>
+      <w>86</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+ItemSelectionListener
+-
+
+-
+#viewOrder(String orderId)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>486</x>
+      <y>264</y>
+      <w>318</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+opens when order is chosen to execute</panel_attributes>
+    <additional_attributes>1570.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>800</x>
+      <y>258</y>
+      <w>60</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>ExecuteOrderActivity
+--
+-orderId: String
+--
+#onCreate(Bundle savedInstanceState)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>824</x>
+      <y>286</y>
+      <w>180</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+has</panel_attributes>
+    <additional_attributes>880.0;160.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>974</x>
+      <y>318</y>
+      <w>50</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>ExecuteOrderViewModel
+--
+
+--
++getPresenter(): ExecuteOrderPresenter
++onCleared()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1046</x>
+      <y>326</y>
+      <w>98</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>ExecuteOrderPresenter
+--
+-orderLineResults: List&lt;OrderLine&gt;
+-view: ExecuteOrderView
+-orders: OrderDAO
+-order: Order
+--
++getOrderLineResults(): List&lt;OrderLine&gt;
++setOrderDAO(OrderDAO orderDAO)
++setOrder(Order orderId)
++setView(ExecuteOrderView view)
++findAll()
++onExecuteOrder()
++onCancelOrder()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1022</x>
+      <y>328</y>
+      <w>28</w>
+      <h>14</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+has</panel_attributes>
+    <additional_attributes>120.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>824</x>
+      <y>286</y>
+      <w>60</w>
+      <h>34</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+has</panel_attributes>
+    <additional_attributes>280.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>810</x>
+      <y>316</y>
+      <w>144</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>OrderInboxRecyclerViewAdapter
+--
+-mValues: List&lt;OrderLine&gt; {readOnly}
+--
++onCreateViewHolder(ViewGroup parent, int viewType): OrderInboxRecyclerViewAdapter.ViewHolder
++onBindViewHolder(ExecuteOrderRecyclerViewAdapter.ViewHolder holder, int position)
++getItemCount():Integer
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>708</x>
+      <y>362</y>
+      <w>98</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>RecyclerView.Adapter&lt;ExecuteOrderRecyclerViewAdapter.ViewHolder&gt;
+--
+
+--
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>804</x>
+      <y>342</y>
+      <w>84</w>
+      <h>38</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+extended by</panel_attributes>
+    <additional_attributes>10.0;170.0;400.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>882</x>
+      <y>342</y>
+      <w>24</w>
+      <h>34</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+contains class</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>372</y>
+      <w>86</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>ViewHolder
+-
++customerName, orderId, orderCost: TextView
++viewOrderButton: Button {readOnly} 
+-</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>906</x>
+      <y>258</y>
+      <w>56</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+ExecuteOrderView
+--
+
+--
+#onSuccessfulOrderExecution()
+#onSuccessfulOrderCancel()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>858</x>
+      <y>268</y>
+      <w>52</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+implements</panel_attributes>
+    <additional_attributes>240.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>214</x>
+      <y>214</y>
+      <w>198</w>
+      <h>34</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+opens when manager wants to restock</panel_attributes>
+    <additional_attributes>10.0;150.0;970.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>188</x>
+      <y>244</y>
+      <w>54</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>RestockProductsActivity
+--
+-eofField, batchIdField, quantityField: EditText
+-restockButton:Button
+-boolean restockButtonEnabled: Boolean
+-EOF, batchID, quantity: String
+#inputFieldsWatcher: TextWatcher
+
+--
+#onCreate(Bundle savedInstanceState)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>272</x>
+      <y>248</y>
+      <w>66</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+RestockProductsView
+--
+
+--
+#onSuccessfulRestock()
+#showError(String title, String message)
+#showToast(String message)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>258</y>
+      <w>36</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+implements</panel_attributes>
+    <additional_attributes>160.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>210</x>
+      <y>272</y>
+      <w>10</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+has</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>142</x>
+      <y>286</y>
+      <w>122</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>RestockProductsPresenter
+--
+#view: RestockProductsView
+#products: ProductTypeDAO
+--
++onRestockButton(String EOF, String batchID, String quantity, boolean restockButtonEnabled)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>432</x>
+      <y>200</y>
+      <w>234</w>
+      <h>16</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+has</panel_attributes>
+    <additional_attributes>1150.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>548</x>
+      <y>212</y>
+      <w>56</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+RecallBatchView
+--
+#onSuccessfulRecall()
+#showError(String title, String message)
+#showToast(String message)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>638</x>
+      <y>212</y>
+      <w>52</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>RecallBatchActivity
+--
+-eofField, batchIdField: EditText
+-recallButton:Button
+-recallButtonEnabled: Boolean
+-EOF,batchID: String
+#inputFieldsWatcher: TextWatcher
+--
+#onCreate(Bundle savedInstanceState)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>728</x>
+      <y>212</y>
+      <w>98</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>RecallBatchPresenter
+--
+#view: RecallBatchView
+#orders: OrderDAO
+#products: ProductTypeDAO
+#users: UserAccountDAO
+--
++onRecallButton(String EOF, String batchID, boolean recallButtonEnabled)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>602</x>
+      <y>218</y>
+      <w>40</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+implements</panel_attributes>
+    <additional_attributes>10.0;20.0;180.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>688</x>
+      <y>218</y>
+      <w>44</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+has</panel_attributes>
+    <additional_attributes>200.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>

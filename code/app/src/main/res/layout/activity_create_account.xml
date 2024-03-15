@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.team12.view.createAccount.CreateAccountActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="140dp">
+
+    <EditText
+        android:id="@+id/create_account_name_text_field"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="@string/sign_up_legal_name_short"
+        android:inputType="text"
+        android:textColor="@color/text"
+        android:textColorHint="@color/hint"
+        app:layout_constraintEnd_toEndOf="@+id/create_account_name_text_view"
+        app:layout_constraintStart_toStartOf="@+id/create_account_name_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/create_account_name_text_view" />
+
+    <TextView
+        android:id="@+id/create_account_name_text_view"
+        android:layout_width="210dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:lineSpacingExtra="96sp"
+        android:text="@string/sign_up_legal_name"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/text"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/create_account_password_text_view"
+        android:layout_width="210dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/password"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/text"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/create_account_email_text_field"
+        app:layout_constraintStart_toStartOf="@+id/create_account_email_text_field"
+        app:layout_constraintTop_toBottomOf="@+id/create_account_email_text_field"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/create_account_password_field"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textColor="@color/text"
+        android:textColorHint="@color/hint"
+        app:layout_constraintEnd_toEndOf="@+id/create_account_password_text_view"
+        app:layout_constraintStart_toStartOf="@+id/create_account_password_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/create_account_password_text_view" />
+
+    <TextView
+        android:id="@+id/create_account_email_text_view"
+        android:layout_width="210dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/email"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/text"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/create_account_TIN_text_view"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/create_account_TIN_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/create_account_street_text_field"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/create_account_email_text_field"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/text"
+        android:textColorHint="@color/hint"
+        app:layout_constraintEnd_toEndOf="@+id/create_account_email_text_view"
+        app:layout_constraintStart_toStartOf="@+id/create_account_email_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/create_account_email_text_view" />
+
+    <EditText
+        android:id="@+id/create_account_TIN_text_field"
+        android:layout_width="210dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="@string/sign_up_TIN"
+        android:inputType="number"
+        android:textColor="@color/text"
+        android:textColorHint="@color/hint"
+        app:layout_constraintEnd_toEndOf="@+id/create_account_TIN_text_view"
+        app:layout_constraintStart_toStartOf="@+id/create_account_TIN_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/create_account_TIN_text_view" />
+
+    <TextView
+        android:id="@+id/create_account_TIN_text_view"
+        android:layout_width="210dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/sign_up_TIN"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/text"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/create_account_name_text_field"
+        app:layout_constraintStart_toStartOf="@+id/create_account_name_text_field"
+        app:layout_constraintTop_toBottomOf="@+id/create_account_name_text_field"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/create_account_sign_up_button"
+        android:layout_width="222dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/button"
+        android:text="@string/sign_up_button"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/create_account_postal_code_text_view"
+        android:layout_width="87dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/sign_up_postal_code"
+        android:textColor="@color/text"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/create_account_TIN_text_field"
+        app:layout_constraintTop_toBottomOf="@+id/create_account_TIN_text_field" />
+
+    <TextView
+        android:id="@+id/create_account_country_text_view"
+        android:layout_width="87dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/sign_up_country"
+        android:textColor="@color/text"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/create_account_TIN_text_field"
+        app:layout_constraintTop_toBottomOf="@+id/create_account_TIN_text_field" />
+
+    <EditText
+        android:id="@+id/create_account_postal_code_text_field"
+        android:layout_width="96dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="@string/sign_up_postal_code_short"
+        android:inputType="numberSigned"
+        android:textColor="@color/text"
+        android:textColorHint="@color/hint"
+        app:layout_constraintEnd_toEndOf="@+id/create_account_postal_code_text_view"
+        app:layout_constraintStart_toStartOf="@+id/create_account_postal_code_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/create_account_postal_code_text_view" />
+
+    <TextView
+        android:id="@+id/create_account_state_text_view"
+        android:layout_width="87dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/sign_up_state"
+        android:textColor="@color/text"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/create_account_postal_code_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/create_account_postal_code_text_field" />
+
+    <EditText
+        android:id="@+id/create_account_country_text_field"
+        android:layout_width="95dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="@string/sign_up_country"
+        android:inputType="text"
+        android:textColor="@color/text"
+        android:textColorHint="@color/hint"
+        app:layout_constraintEnd_toEndOf="@+id/create_account_country_text_view"
+        app:layout_constraintStart_toStartOf="@+id/create_account_country_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/create_account_country_text_view" />
+
+    <EditText
+        android:id="@+id/create_account_state_text_field"
+        android:layout_width="95dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="@string/sign_up_state"
+        android:inputType="text"
+        android:textColor="@color/text"
+        android:textColorHint="@color/hint"
+        app:layout_constraintEnd_toEndOf="@+id/create_account_state_text_view"
+        app:layout_constraintStart_toStartOf="@+id/create_account_state_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/create_account_state_text_view" />
+
+    <TextView
+        android:id="@+id/create_account_city_text_view"
+        android:layout_width="87dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/sign_up_city"
+        android:textColor="@color/text"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/create_account_country_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/create_account_country_text_field" />
+
+    <EditText
+        android:id="@+id/create_account_city_text_field"
+        android:layout_width="95dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="@string/sign_up_city"
+        android:inputType="text"
+        android:textColor="@color/text"
+        android:textColorHint="@color/hint"
+        app:layout_constraintEnd_toEndOf="@+id/create_account_city_text_view"
+        app:layout_constraintStart_toStartOf="@+id/create_account_city_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/create_account_city_text_view" />
+
+    <TextView
+        android:id="@+id/create_account_street_text_view"
+        android:layout_width="87dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/sign_up_street"
+        android:textColor="@color/text"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/create_account_state_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/create_account_state_text_field" />
+
+    <TextView
+        android:id="@+id/create_account_number_text_view"
+        android:layout_width="87dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/sign_up_street_num"
+        android:textColor="@color/text"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/create_account_city_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/create_account_city_text_field" />
+
+    <EditText
+        android:id="@+id/create_account_street_text_field"
+        android:layout_width="95dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="@string/sign_up_street"
+        android:inputType="text"
+        android:textColor="@color/text"
+        android:textColorHint="@color/hint"
+        app:layout_constraintEnd_toEndOf="@+id/create_account_street_text_view"
+        app:layout_constraintStart_toStartOf="@+id/create_account_street_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/create_account_street_text_view" />
+
+    <EditText
+        android:id="@+id/create_account_number_text_field"
+        android:layout_width="95dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="@string/sign_up_street_num"
+        android:inputType="number"
+        android:textColor="@color/text"
+        android:textColorHint="@color/hint"
+        app:layout_constraintEnd_toEndOf="@+id/create_account_number_text_view"
+        app:layout_constraintStart_toStartOf="@+id/create_account_number_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/create_account_number_text_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <help_text>Space for diagram notes</help_text>
+  <zoom_level>12</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>0</y>
+      <w>408</w>
+      <h>1752</h>
+    </coordinates>
+    <panel_attributes>halign=center
+System
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>180</x>
+      <y>36</y>
+      <w>204</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>New stock arrives 
+in the warehouse
+type=receiver</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>228</x>
+      <y>504</y>
+      <w>168</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Type product type ID</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>276</x>
+      <y>84</y>
+      <w>468</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>370.0;60.0;370.0;30.0;10.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>396</y>
+      <w>564</w>
+      <h>312</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[Wrong]</panel_attributes>
+    <additional_attributes>10.0;20.0;450.0;20.0;450.0;240.0;390.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>276</x>
+      <y>1128</y>
+      <w>48</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>type=decision</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>1128</y>
+      <w>300</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+          [There are no back-orders]</panel_attributes>
+    <additional_attributes>40.0;70.0;40.0;20.0;230.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>36</x>
+      <y>1212</y>
+      <w>24</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>type=final</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>288</x>
+      <y>1164</y>
+      <w>264</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[There is at least 1 back-order]</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>276</x>
+      <y>1284</y>
+      <w>48</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>type=decision</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>12</x>
+      <y>1284</y>
+      <w>288</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+
+         [There are no servicable
+      back-orders]</panel_attributes>
+    <additional_attributes>30.0;70.0;30.0;20.0;220.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>36</x>
+      <y>1368</y>
+      <w>24</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>type=final</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>1284</y>
+      <w>468</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+
+
+[There is at least 1 
+servicable back-order]</panel_attributes>
+    <additional_attributes>370.0;70.0;370.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>624</x>
+      <y>1368</y>
+      <w>300</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>
+Service the first eligible
+backorder based on a reversed 
+chronological order
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>624</x>
+      <y>1044</y>
+      <w>228</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Increase the stock 
+the stock by the given amount</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>12</x>
+      <y>0</y>
+      <w>588</w>
+      <h>1752</h>
+    </coordinates>
+    <panel_attributes>halign=center
+Warehouse Manager
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>264</x>
+      <y>288</y>
+      <w>48</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>type=decision</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>636</x>
+      <y>156</y>
+      <w>180</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Display the option to
+add new batch</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>276</x>
+      <y>216</y>
+      <w>468</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;30.0;370.0;30.0;370.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>96</x>
+      <y>300</y>
+      <w>228</w>
+      <h>852</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[No]</panel_attributes>
+    <additional_attributes>170.0;690.0;170.0;650.0;10.0;650.0;10.0;10.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>276</x>
+      <y>324</y>
+      <w>72</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[Yes]</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>660</x>
+      <y>504</y>
+      <w>168</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Check if the input is
+correct</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>384</x>
+      <y>516</y>
+      <w>300</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>230.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>732</x>
+      <y>552</y>
+      <w>36</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>720</x>
+      <y>660</y>
+      <w>48</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>type=decision</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>732</x>
+      <y>696</y>
+      <w>96</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[Correct]</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>240</x>
+      <y>996</y>
+      <w>168</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Type batch ID
+and amount</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>264</x>
+      <y>396</y>
+      <w>48</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>type=decision</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>276</x>
+      <y>432</y>
+      <w>36</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>396</x>
+      <y>996</y>
+      <w>372</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>290.0;40.0;290.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>300</y>
+      <w>612</w>
+      <h>804</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;490.0;10.0;490.0;650.0;460.0;650.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>1128</y>
+      <w>660</w>
+      <h>552</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;20.0;530.0;20.0;530.0;440.0;520.0;440.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>624</x>
+      <y>1512</y>
+      <w>300</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>Reduce the sold quantity for stock
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>744</x>
+      <y>1428</y>
+      <w>36</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>624</x>
+      <y>1620</y>
+      <w>312</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Send an e-mail to the drug store owner 
+that the backoreder has been serviced
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>744</x>
+      <y>1548</y>
+      <w>36</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>660</x>
+      <y>756</y>
+      <w>192</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Display the product and 
+ask if it is the intended</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>204</x>
+      <y>816</y>
+      <w>240</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Select if it is the desired item</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>300</x>
+      <y>912</y>
+      <w>48</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>type=decision</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>432</x>
+      <y>804</y>
+      <w>336</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;30.0;260.0;30.0;260.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>948</y>
+      <w>72</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[Yes]
+</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>312</x>
+      <y>864</y>
+      <w>36</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+
+</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>156</x>
+      <y>408</y>
+      <w>168</w>
+      <h>552</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+[No]
+</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0;10.0;440.0;120.0;440.0</additional_attributes>
+  </element>
+</diagram>

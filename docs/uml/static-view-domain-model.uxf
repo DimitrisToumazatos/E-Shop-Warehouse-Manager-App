@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <help_text>Space for diagram notes</help_text>
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1233</x>
+      <y>522</y>
+      <w>261</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Order
+--
+
+-
++addOrderLine(product, quantity)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1683</x>
+      <y>873</y>
+      <w>297</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>ProductType
+--
+-name:String{readOnly}
+-category:String{readOnly}
+-EOF:String{readOnly}
+-price:Money
+-/totalQuantity:Integer
+-
++getters(): Type {query}
++setters( newValue:Type )
++hasQuantity(): Boolean
++getBatchList(): Batch[1..*]
++reduceQuantity( quantity:Integer )
++addBatch()
++orderProduct( orderedQuantity:Integer,
+orderBatchAllocationList: BatchAllocation [1..*] )</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>774</x>
+      <y>522</y>
+      <w>333</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Backorder
+--
+
+-
++getBackOrderedProduct(): ProductType</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1062</x>
+      <y>909</y>
+      <w>198</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>OrderLine
+--
+-orderedQuantity: Integer
+-/subtotal:Float
+-
++execute( orderBatchAllocationList: BatchAllocation[1..*] ):
++getters(): Type {query}
++getSubtotal(): Money {query}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>522</x>
+      <y>162</y>
+      <w>270</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>AbstractAccount
+--
+-name: String
+-TIN: String
+-address: Address
+-email: Email
+--
++getters(): Type {query}
++setters( newValue:Type )
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1719</x>
+      <y>144</y>
+      <w>198</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>Batch
+--
+-date: LocalDate {readOnly}
+-EOF: String {readOnly}
+-batchID: String {readOnly}
+-initialQuantity: Integer {readOnly}
+-runningQuantity: Integer
+-
++getters(): Type {query}
++increaseQuantity( quantity:Integer)
++reduceQuantity( quantity:Integer)
++hasQuantity(): Boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>495</x>
+      <y>882</y>
+      <w>135</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>
+&lt;&lt;value&gt;&gt;
+Address
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>495</x>
+      <y>792</y>
+      <w>135</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>
+&lt;&lt;value&gt;&gt;
+Email
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1350</x>
+      <y>162</y>
+      <w>225</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>BatchAllocation
+-
+-quantity: Integer {readOnly}
+-batch: Batch {readOnly}
+-
++getters(): Type {query}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>999</x>
+      <y>144</y>
+      <w>279</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>AbstractOrder
+-
+#batchAllocationList: BatchAllocation [1..*]  {readOnly}
+#dateOfSubmission: LocalDate {readOnly}
+#orderID: String {readOnly}
+#status: String
+/totalCost: Money
+-
++execute()
++getters(): Type {query}
++setStatus()
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>783</x>
+      <y>216</y>
+      <w>234</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=*
+has</panel_attributes>
+    <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1269</x>
+      <y>216</y>
+      <w>99</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=*
+has</panel_attributes>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1566</x>
+      <y>216</y>
+      <w>171</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=*
+m2=1
+has</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>954</x>
+      <y>324</y>
+      <w>207</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;220.0;210.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1143</x>
+      <y>324</y>
+      <w>243</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;</panel_attributes>
+    <additional_attributes>250.0;220.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>927</x>
+      <y>693</y>
+      <w>252</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+contains
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;260.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1152</x>
+      <y>693</y>
+      <w>243</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=*
+contains
+m2=1
+</panel_attributes>
+    <additional_attributes>250.0;10.0;10.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1251</x>
+      <y>963</y>
+      <w>450</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=*
+m2=1
+has</panel_attributes>
+    <additional_attributes>10.0;20.0;480.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1809</x>
+      <y>297</y>
+      <w>72</w>
+      <h>594</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=*
+contains</panel_attributes>
+    <additional_attributes>10.0;640.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>495</x>
+      <y>981</y>
+      <w>135</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>
+&lt;&lt;value&gt;&gt;
+Money
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>162</x>
+      <y>261</y>
+      <w>270</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>ManagerAccount
+--
++getPendingOrderList(): AbstractOrder[0..*]
++addToPendingOrderList( newOrder: AbstractOrder)
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>162</x>
+      <y>99</y>
+      <w>270</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>UserAccount
+--
++getOrderList(): AbstractOrder[0..*]
++addToOrderList( newOrder: AbstractOrder)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>423</x>
+      <y>153</y>
+      <w>117</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>110.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>423</x>
+      <y>243</y>
+      <w>117</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+</diagram>

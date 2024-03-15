@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/popup_add_product_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/popup_background">
+
+        <EditText
+            android:id="@+id/popup_add_product_EOF_field"
+            android:layout_width="210dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="EOF #"
+            android:inputType="number"
+            android:textColor="@color/background"
+            android:textColorHint="@color/hint_dark"
+            app:layout_constraintBottom_toBottomOf="@+id/popup_add_product_EOF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/popup_add_product_EOF" />
+
+        <EditText
+            android:id="@+id/popup_add_product_quantity_field"
+            android:layout_width="210dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Quantity"
+            android:inputType="number"
+            android:textColor="@color/background"
+            android:textColorHint="@color/hint_dark"
+            app:layout_constraintBottom_toBottomOf="@+id/popup_add_product_quantity"
+            app:layout_constraintEnd_toEndOf="@+id/popup_add_product_EOF_field"
+            app:layout_constraintStart_toStartOf="@+id/popup_add_product_EOF_field" />
+
+        <TextView
+            android:id="@+id/popup_add_product_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="@string/restock_products_quantity"
+            android:textColor="@color/background"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="@+id/popup_add_product_EOF"
+            app:layout_constraintTop_toBottomOf="@+id/popup_add_product_EOF" />
+
+        <TextView
+            android:id="@+id/popup_add_product_EOF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/restock_products_EOF"
+            android:textColor="@color/background"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/popup_add_product_confirm_button"
+            android:layout_width="220dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/button"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popup_add_product_quantity" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text">#9EC8B9</color>
+    <color name="hint">#82A89B</color>
+    <color name="hint_dark">#3D5D6D</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#092635</color>
+    <color name="button">#5C8374</color>
+    <color name="popup">#9EC8B9</color>
+</resources>
