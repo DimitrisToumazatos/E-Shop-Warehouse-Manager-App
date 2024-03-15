@@ -2,9 +2,9 @@
 *Created by:  <a href="https://github.com/DimitrisToumazatos" title="Dimitris Toumazatos">Dimitris Toumazatos</a>, <a href="https://github.com/alexisthedev" title="Alexios Papadopoulos">Alexios Papadopoulos-Siountris</a> and <a href="https://github.com/DFotogiannopoulos" title="Dimitris Fotogiannopoulos">Dimitris Fotogiannopoulos</a>*
 
 The teams worked together on the App's design. Later on, each member focused mainly on the following aspects:
-Dimitris Toumazatos: Automated Testing using JUnit.
-Alexios Papadopoulos-Siountris: App Functionality.
-Dimitris Fotogiannopoulos: Detailed Analysis and Graphs demonstrating App's usage.
+Dimitris Toumazatos: Automated Testing using JUnit.  
+Alexios Papadopoulos-Siountris: App Functionality.  
+Dimitris Fotogiannopoulos: Detailed Analysis and Graphs demonstrating App's usage.  
 
 
 This document gives an overview of the application and its functionality.
